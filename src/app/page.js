@@ -16,21 +16,23 @@ export default function Home() {
   };
 
   const alternarTarea = (id) => {
-    setTareas(tareas.map(tarea=> 
-      tarea.id === id ? {...tarea, completado : !tarea.completado} : tarea
+    setTareas(tareas.map(tarea =>
+      tarea.id === id ? { ...tarea, completado: !tarea.completado } : tarea
     ));
   };
 
-  const quitarTarea = (id) =>{
+  const quitarTarea = (id) => {
     setTareas(tareas.filter(tarea => tarea.id !== id));
   };
 
 
   return (
-    <div>
-      <h1>To-Do list</h1>
-      <Formulario agregarTarea={agregarTarea} />
-      <Lista tareas={tareas} alternarTarea={alternarTarea} quitarTarea={quitarTarea} />
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center" >
+      <h1 className="text-3xl font-bold mt-10 mb-5 text-gray-800" >Lista de Pendientes</h1>
+      <div className="w-full max-w-md px-4" >
+        <Formulario agregarTarea={agregarTarea} />
+        <Lista tareas={tareas} alternarTarea={alternarTarea} quitarTarea={quitarTarea} />
+      </div>
     </div>
   );
-}
+};
