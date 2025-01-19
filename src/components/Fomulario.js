@@ -24,7 +24,7 @@ export default function Formulario({ agregarTarea }) {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Nueva Tarea"
-                className="flex-grow p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-grow p-2 border border-gray-300 rounded-md shadow-sm text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button
                 type="submit"

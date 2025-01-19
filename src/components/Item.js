@@ -7,7 +7,7 @@ export default function Item({ tarea, alternarTarea, quitarTarea }) {
             className='flex items-center gap-x-4 p-2 bg-gray-100 rounded-md'
         >
             <span
-                className={`flex-grow ${tarea.completado ? 'line-through text-gray-500' : ''
+                className={`flex-grow ${tarea.completado ? 'line-through text-gray-500' : 'text-black'
                     }`}
             >
                 {tarea.texto}
